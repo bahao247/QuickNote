@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuickNote1.HomePage">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <ScrollView>
+    <StackLayout>
+      <Label Text="Quick Note"
+              Font="24"
+              HorizontalOptions="Center"
+              VerticalOptions="Center"
+              FontAttributes="Bold"
+             TextColor="Blue"/>
+      <Entry x:Name="nameNoteEntry"
+              Placeholder="Name" TextColor="Blue"/>
+      <Entry x:Name="typeNoteEntry"
+              Placeholder="Type" TextColor="Blue"/>
+      <Entry x:Name="textNoteEntry"
+              Placeholder="Note" TextColor="Blue"/>
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Due date: "
+               Font="14"
+                VerticalOptions="Center" FontAttributes="Bold"
+             TextColor="Blue"/>
+        <TimePicker x:Name="dueTimeNotePicker" />
+        <DatePicker x:Name="dueDateNotePicker" />
+        <Label Text="Status: "
+               Font="14"
+                VerticalOptions="Center" FontAttributes="Bold"
+             TextColor="Blue"/>
+        <Switch x:Name="statusNoteSwitch"
+                VerticalOptions="Center"
+                IsToggled="True" />
+        <Label Text="Done: "
+               Font="14"
+                VerticalOptions="Center" FontAttributes="Bold"
+             TextColor="Blue"/>
+        <Switch x:Name="doneNoteSwitch"
+                VerticalOptions="Center"
+                IsToggled="False" />
+      </StackLayout>
+
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Priority: " FontAttributes="Bold"
+             TextColor="Blue"/>
+        <Label Text="None- "
+                 Font="14" FontAttributes="Bold"
+             TextColor="Blue"/>
+        <Switch x:Name="statusNoteSwitchNone"
+                  VerticalOptions="Center"
+                  IsToggled="True" />
+        <Label Text="Low- "
+                 Font="14" FontAttributes="Bold"
+             TextColor="Blue"/>
+        <Switch x:Name="statusNoteSwitchLow"
+                  VerticalOptions="Center"
+                  IsToggled="False" />
+        <Label Text="High- "
+                 Font="14" FontAttributes="Bold"
+             TextColor="Blue"/>
+        <Switch x:Name="statusNoteSwitchHigh"
+                  VerticalOptions="Center"
+                  IsToggled="False" />
+        <Label Text="Urgen- "
+                 Font="14" FontAttributes="Bold"
+             TextColor="Blue"/>
+        <Switch x:Name="statusNoteSwitchUrgen"
+                  VerticalOptions="Center"
+                  IsToggled="False" />
+      </StackLayout>
+
+      <Button x:Name="addButton"
+              Text="Add"
+              BackgroundColor="Navy"
+              TextColor="White" />
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Type Filter-    "
+               Font="14"
+                VerticalOptions="Center" FontAttributes="Bold" 
+             TextColor="Blue"/>
+      <Switch x:Name="filterNoteSwitch"
+              VerticalOptions="Center"
+              IsToggled="False" />
+      <Label Text="-Day Filter"
+               Font="14"
+                VerticalOptions="Center" FontAttributes="Bold"
+             TextColor="Blue"/>
+    </StackLayout>
+      <ListView x:Name="noteListView" />
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

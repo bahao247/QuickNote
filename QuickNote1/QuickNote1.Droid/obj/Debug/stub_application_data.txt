@@ -1,0 +1,2 @@
+android.app.Application
+QuickNote1.Droid

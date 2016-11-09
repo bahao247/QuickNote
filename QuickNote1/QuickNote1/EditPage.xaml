@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="QuickNote1.EditPage">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+
+  <ScrollView>
+    <StackLayout Padding="10" Spacing="10">
+      <Label Text="Edit Note"
+             Font="24"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"
+             FontAttributes="Bold" 
+             TextColor="Blue"/>
+      <Label Text="Name: "
+               Font="14"
+                VerticalOptions="Center" FontAttributes="Bold" 
+             TextColor="Blue"/>
+      <Entry x:Name="nameNoteEntry"
+              Placeholder="Name" TextColor="Blue"/>
+      <Label Text="Type: "
+               Font="14"
+                VerticalOptions="Center" FontAttributes="Bold" 
+             TextColor="Blue"/>
+      <Entry x:Name="typeNoteEntry"
+              Placeholder="Type" TextColor="Blue"/>
+      <Label Text="Note: "
+               Font="14"
+                VerticalOptions="Center" FontAttributes="Bold" 
+             TextColor="Blue"/>
+      <Entry x:Name="textNoteEntry"
+              Placeholder="Note" TextColor="Blue"/>
+      
+      <Label Text="Expired time: "
+               Font="14"
+                VerticalOptions="Center" FontAttributes="Bold" 
+             TextColor="Blue"/>
+      <Entry x:Name="remindingNoteEntry"
+              Placeholder="Reminding" TextColor="Blue"/>
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Due date: "
+               Font="14"
+                VerticalOptions="Center" FontAttributes="Bold" 
+             TextColor="Blue"/>
+        <TimePicker x:Name="dueTimeNotePicker" TextColor="Blue"/>
+        <DatePicker x:Name="dueDateNotePicker" TextColor="Blue"/>
+        <Label Text="Status: "
+               Font="14"
+                VerticalOptions="Center" FontAttributes="Bold" 
+             TextColor="Blue"/>
+        <Switch x:Name="statusNoteSwitch"
+                VerticalOptions="Center"
+                IsToggled="True" />
+        <Label Text="Done: "
+                 Font="14"
+                  VerticalOptions="Center" FontAttributes="Bold" 
+             TextColor="Blue"/>
+        <Switch x:Name="doneNoteSwitch"
+                  VerticalOptions="Center"
+                  IsToggled="False" />
+      </StackLayout>
+
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Priority: " FontAttributes="Bold" 
+             TextColor="Blue"/>
+        <Label Text="None- "
+                 Font="14" FontAttributes="Bold" 
+             TextColor="Blue"/>
+        <Switch x:Name="statusNoteSwitchNone"
+                  VerticalOptions="Center"
+                  IsToggled="False" />
+        <Label Text="Low- "
+                 Font="14" FontAttributes="Bold" 
+             TextColor="Blue"/>
+        <Switch x:Name="statusNoteSwitchLow"
+                  VerticalOptions="Center"
+                  IsToggled="False" />
+        <Label Text="High- "
+                 Font="14" FontAttributes="Bold" 
+             TextColor="Blue"/>
+        <Switch x:Name="statusNoteSwitchHigh"
+                  VerticalOptions="Center"
+                  IsToggled="False" />
+        <Label Text="Urgen- "
+                 Font="14" FontAttributes="Bold" 
+             TextColor="Blue"/>
+        <Switch x:Name="statusNoteSwitchUrgen"
+                  VerticalOptions="Center"
+                  IsToggled="False" />
+      </StackLayout>
+      
+      <StackLayout Orientation="Horizontal">
+        <Button x:Name="saveButton"
+                Text="Save"
+                BackgroundColor="Teal"
+                TextColor="White"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center" />
+        <Button x:Name="deleteButton"
+                Text="Delete"
+                BackgroundColor="Red"
+                TextColor="White"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center" />
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+
+</ContentPage>
