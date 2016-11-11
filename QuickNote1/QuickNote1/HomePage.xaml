@@ -30,7 +30,7 @@
              TextColor="Blue"/>
         <Switch x:Name="statusNoteSwitch"
                 VerticalOptions="Center"
-                IsToggled="True" />
+                IsToggled="False" />
         <Label Text="Done: "
                Font="14"
                 VerticalOptions="Center" FontAttributes="Bold"

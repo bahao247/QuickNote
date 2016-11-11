@@ -118,14 +118,14 @@ namespace QuickNote1
             if (string.IsNullOrEmpty(typeNoteEntry.Text))
             {
                 DisplayAlert("Error", "Type of notes must not be blank", "Accept");
-                nameNoteEntry.Focus();
+                typeNoteEntry.Focus();
                 return;
             }
 
             if (statusNoteSwitch.IsToggled == true && (dueDateNotePicker.Date + dueTimeNotePicker.Time) <= DateTime.Now)
             {
-                dueDateNotePicker.Focus();
-                DisplayAlert("Error", "Date of notes must not be blank when note actived", "Accept");
+                dueTimeNotePicker.Focus();
+                DisplayAlert("Error", "Date of notes must not be blank when note actived or Expired time", "Accept");
                 return;
             }
 

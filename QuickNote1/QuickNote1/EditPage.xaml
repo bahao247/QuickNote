@@ -36,7 +36,7 @@
                 VerticalOptions="Center" FontAttributes="Bold" 
              TextColor="Blue"/>
       <Entry x:Name="remindingNoteEntry"
-              Placeholder="Reminding" TextColor="Blue"/>
+              Placeholder="Reminding" TextColor="Blue" IsEnabled="false"/>
       <StackLayout Orientation="Horizontal">
         <Label Text="Due date: "
                Font="14"
@@ -50,7 +50,7 @@
              TextColor="Blue"/>
         <Switch x:Name="statusNoteSwitch"
                 VerticalOptions="Center"
-                IsToggled="True" />
+                IsToggled="False" />
         <Label Text="Done: "
                  Font="14"
                   VerticalOptions="Center" FontAttributes="Bold" 

@@ -13,10 +13,9 @@ D:\git\Xamarin\QuickNote\QuickNote1\QuickNote1\obj\Release\QuickNote1.HomePage.x
 D:\git\Xamarin\QuickNote\QuickNote1\QuickNote1\obj\Release\QuickNote1.EditPage.xaml.g.cs
 D:\git\Xamarin\QuickNote\QuickNote1\QuickNote1\obj\Release\QuickNote1.dll
 D:\git\Xamarin\QuickNote\QuickNote1\QuickNote1\obj\Release\QuickNote1.pdb
-D:\git\Xamarin\QuickNote\QuickNote1\QuickNote1\obj\Release\QuickNote1.dll.mdb
-D:\git\Xamarin\QuickNote\QuickNote1\QuickNote1\bin\Release\QuickNote1.dll.mdb
-D:\git\Xamarin\QuickNote\QuickNote1\QuickNote1\obj\Release\QuickNote1.dll.mdb
-D:\git\Xamarin\QuickNote\QuickNote1\QuickNote1\bin\Release\QuickNote1.dll.mdb
+D:\git\Xamarin\QuickNote\QuickNote1\QuickNote1\bin\Release\Mono.Android.dll
+D:\git\Xamarin\QuickNote\QuickNote1\QuickNote1\bin\Release\Mono.Android.xml
+D:\git\Xamarin\QuickNote\QuickNote1\QuickNote1\obj\Release\QuickNote1.csprojResolveAssemblyReference.cache
 D:\git\Xamarin\QuickNote\QuickNote1\QuickNote1\obj\Release\QuickNote1.dll.mdb
 D:\git\Xamarin\QuickNote\QuickNote1\QuickNote1\bin\Release\QuickNote1.dll.mdb
 D:\git\Xamarin\QuickNote\QuickNote1\QuickNote1\obj\Release\QuickNote1.dll.mdb

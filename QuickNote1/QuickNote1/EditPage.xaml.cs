@@ -33,18 +33,18 @@ namespace QuickNote1
 
             dueDateNotePicker.Date = quicknote.DueDateNote.AddHours(-localZone.BaseUtcOffset.Hours);
 
-            if ((statusNoteSwitch.IsToggled == true) && ((dueDateNotePicker.Date + dueTimeNotePicker.Time) <= DateTime.Now))
-            {
-                statusNoteSwitch.IsToggled = false;
-            }
-            else if ((statusNoteSwitch.IsToggled == false) && ((dueDateNotePicker.Date + dueTimeNotePicker.Time) > DateTime.Now))
-            {
-                statusNoteSwitch.IsToggled = true;
-            }
-
             if (doneNoteSwitch.IsToggled)
             {
-                remindingNoteEntry.Text = "Task done!!!";
+                statusNoteSwitch.IsToggled = true;
+
+                if ((quicknote.DueDateNote.AddHours(-localZone.BaseUtcOffset.Hours) + quicknote.DueTimeNote) < DateTime.Now)
+                {
+                    remindingNoteEntry.Text = "Task done late, after expired time!!!";
+                }
+                else
+                {
+                    remindingNoteEntry.Text = "Task done!!!";
+                }
             }
             else if (!statusNoteSwitch.IsToggled)
             {
@@ -154,16 +154,17 @@ namespace QuickNote1
                 return;
             }
 
-            if (statusNoteSwitch.IsToggled == true && ((dueDateNotePicker.Date + dueTimeNotePicker.Time) <= DateTime.Now))
+            if (remindingNoteEntry.Text == "Task done late, after expired time!!!" || remindingNoteEntry.Text == "Task done!!!")
             {
-                statusNoteSwitch.IsToggled = false;
+                doneNoteSwitch.IsToggled =  true;
             }
-            else if (statusNoteSwitch.IsToggled == false && ((dueDateNotePicker.Date + dueTimeNotePicker.Time) > DateTime.Now))
+
+            if (doneNoteSwitch.IsToggled)
             {
                 statusNoteSwitch.IsToggled = true;
             }
 
-            QuickNote quicknote = new QuickNote
+                QuickNote quicknote = new QuickNote
             {
                 IDNote = this.quicknote.IDNote,
                 NameNote = nameNoteEntry.Text,
@@ -181,7 +182,7 @@ namespace QuickNote1
                 data.UpdateNote(quicknote);
             }
 
-            if (!doneNoteSwitch.IsToggled && ((dueDateNotePicker.Date + dueTimeNotePicker.Time) <= DateTime.Now))
+            if (!doneNoteSwitch.IsToggled && statusNoteSwitch.IsToggled && ((dueDateNotePicker.Date + dueTimeNotePicker.Time) <= DateTime.Now))
             {
 
                 var rta = await DisplayAlert("Confirm", "Expired task. Do you want to delete this note?", "Yes", "No");
